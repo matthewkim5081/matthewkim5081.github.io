@@ -324,6 +324,38 @@ a.vbox:hover .play{background:#ff0000}
 .t-mid{border-radius:14px 14px 0 0;border-bottom:0;background:var(--sage);grid-template-columns:auto 1fr;align-items:baseline;gap:8px}
 .t-arr{display:none}
 .t-end{border-radius:0 0 14px 14px}}
+/* horizontal tree (slide-style) */
+.ht{--lc:var(--soft);display:flex;align-items:center;margin-top:28px}
+.ht ul{list-style:none;margin:0;padding:0 0 0 18px;display:flex;flex-direction:column;justify-content:center;position:relative}
+.ht ul::before{content:"";position:absolute;left:0;top:50%;width:18px;border-top:2px solid var(--lc)}
+.ht li{display:flex;align-items:center;position:relative;padding:6px 0}
+.ht li::before{content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px solid var(--lc)}
+.ht li:first-child::before{top:50%}
+.ht li:last-child::before{bottom:50%}
+.ht li:only-child::before{display:none}
+.ht li::after{content:"";position:absolute;left:0;top:50%;width:18px;border-top:2px solid var(--lc)}
+.ht li>.n{margin-left:18px}
+.ht .n{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:10px 14px;display:grid;gap:1px;white-space:nowrap}
+.ht .n b{font-size:15px}
+.ht .n span{font-size:12px;color:var(--soft)}
+.ht .root{background:var(--pine);border-color:var(--pine);color:#fff;padding:18px}
+.ht .root b{font-family:"Gowun Batang",serif;font-size:20px}.ht .root span{color:#cfe2d8}
+.ht .end b{font-family:"Gowun Batang",serif;font-size:17px}
+.ht .bad b{color:var(--coral)}
+.ht .hi{background:var(--pine2);border-color:var(--pine2)}
+.ht .hi b{color:#fff}.ht .hi span{color:#d7ebe1}
+@media(max-width:760px){
+.ht{flex-direction:column;align-items:stretch}
+.ht ul{padding:0;margin-left:20px}
+.ht ul::before{display:none}
+.ht li{display:block;padding:10px 0 0 18px}
+.ht li::before,.ht li:first-child::before{display:block;content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px solid var(--lc)}
+.ht li:last-child::before,.ht li:only-child::before{display:block;bottom:auto;height:34px}
+.ht li::after{left:0;top:34px;width:16px}
+.ht li>.n{margin-left:0;white-space:normal}
+.ht li>ul{margin-top:0}
+.ht .n{padding:10px 14px}
+.ht .root{text-align:center;padding:14px}}
 /* PV/BV + rate table */
 .pvbv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
 .pvbv div{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;gap:2px}
