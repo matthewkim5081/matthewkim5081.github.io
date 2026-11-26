@@ -55,7 +55,8 @@ nav ul a:hover{color:var(--ink)}
 /* people */
 .who{background:var(--pine);color:#eef6f1}
 .who .in{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,4vw,56px)}
-.person{display:grid;grid-template-columns:96px minmax(0,1fr);gap:20px;align-items:start}
+.person{display:grid;grid-template-columns:minmax(130px,220px) minmax(0,1fr);gap:clamp(16px,2.4vw,28px);align-items:center}
+.pf{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:18px;box-shadow:0 0 0 6px #ffffff14}
 .av{width:96px;height:96px;border-radius:50%;background:var(--pine2);overflow:hidden}
 .person h3{font-size:26px}
 .role{color:#ffb3a1;font-size:15px;margin:4px 0 10px}
@@ -167,8 +168,8 @@ footer .in{display:grid;gap:6px}
 .scene{position:relative;height:300px;display:block}
 .hero .copy{padding-top:32px;padding-bottom:8px}
 .who .in,.vlist,form{grid-template-columns:minmax(0,1fr)}
-.person{grid-template-columns:72px minmax(0,1fr)}
-.av{width:72px;height:72px}
+.person{grid-template-columns:118px minmax(0,1fr);align-items:start}
+.pf{border-radius:14px}
 .gal{grid-auto-rows:160px;gap:10px}
 .gal figcaption{padding:28px 12px 10px}
 .gal figcaption b{font-size:17px}
