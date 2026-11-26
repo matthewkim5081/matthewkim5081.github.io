@@ -183,33 +183,61 @@
 </ul>
 </div>
 
-<h3 class="sub">선착순이 아니라 노력순입니다</h3>
-<p class="lead" style="margin-top:8px">먼저 시작한 사람이 무조건 많이 받는 구조가 아닙니다. 보너스의 기본 원리를 아주 단순한 예로 보여 드릴게요.</p>
-<div class="bonus">
-<svg viewBox="0 0 400 360" role="img" aria-label="S 아래 본인, 본인 아래 A와 B가 있는 그림. A와 B는 각각 6,000원, 본인은 24,000원, 먼저 시작한 S는 12,000원을 받아 본인이 S보다 더 많이 받는 수입역전이 일어난다">
+<h3 class="sub">보상의 기본: PV와 BV</h3>
+<p class="lead" style="margin-top:8px">암웨이 제품에는 가격과 함께 두 가지 점수가 정해져 있어요. 한 달 동안 나와 내 그룹이 구매한 점수를 모아 후원수당(캐시백)이 정해집니다.</p>
+<div class="pvbv">
+<div><b>PV</b><span>Point Value</span><p>몇 %를 받을지 <em>비율과 자격</em>을 정하는 점수</p></div>
+<div><b>BV</b><span>Business Volume</span><p>실제 <em>금액</em>을 계산하는 기준 점수</p></div>
+</div>
+<div class="rate">
+<div class="rh">월간 그룹 PV에 따른 후원수당 비율</div>
+<div class="steps7">
+<div style="--h:1"><b>3%</b><span>20만</span></div><div style="--h:2"><b>6%</b><span>60만</span></div><div style="--h:3"><b>9%</b><span>120만</span></div><div style="--h:4"><b>12%</b><span>240만</span></div><div style="--h:5"><b>15%</b><span>400만</span></div><div style="--h:6"><b>18%</b><span>680만</span></div><div style="--h:7"><b>21%</b><span>1,000만</span></div>
+</div>
+<div class="rf">PV 이상 달성 시 · 출처: 한국암웨이 후원수당 비율표</div>
+</div>
+
+<h3 class="sub">퀴즈! 누가 가장 많이 받을까요?</h3>
+<div class="bonus quiz" id="quiz">
+<svg viewBox="0 0 400 360" role="img" aria-label="S 아래 본인, 본인 아래 A와 B. 네 사람 모두 20만 PV를 구매했다">
 <g font-family="Noto Sans KR,sans-serif" text-anchor="middle">
 <path d="M200 70v60M200 190 110 270M200 190l90 80" class="bl"/>
 <circle cx="200" cy="48" r="38" class="bs"/><text x="200" y="44" font-size="18" font-weight="700" fill="#fff">S</text><text x="200" y="64" font-size="12" fill="#fff">먼저 시작</text>
-<text x="252" y="54" font-size="20" font-weight="700" text-anchor="start" class="bt">12,000</text>
+<text x="150" y="54" font-size="13" text-anchor="end" class="bp">20만 PV</text>
 <circle cx="200" cy="162" r="40" class="bm"/><text x="200" y="158" font-size="18" font-weight="700" fill="#fff">본인</text><text x="200" y="178" font-size="12" fill="#fff">나중에 시작</text>
-<text x="254" y="168" font-size="20" font-weight="700" text-anchor="start" class="bc">24,000</text>
-<rect x="268" y="112" width="96" height="26" rx="13" class="br"/><text x="316" y="130" font-size="13" font-weight="700" fill="#fff">수입역전!</text>
+<text x="148" y="168" font-size="13" text-anchor="end" class="bp">20만 PV</text>
 <circle cx="110" cy="290" r="34" class="ba"/><text x="110" y="288" font-size="17" font-weight="700" fill="#fff">A</text><text x="110" y="306" font-size="11" fill="#fff">20만 PV</text>
 <circle cx="290" cy="290" r="34" class="ba"/><text x="290" y="288" font-size="17" font-weight="700" fill="#fff">B</text><text x="290" y="306" font-size="11" fill="#fff">20만 PV</text>
+<g class="qm" font-size="24" font-weight="700"><text x="270" y="56">?</text><text x="272" y="170">?</text><text x="110" y="348">?</text><text x="290" y="348">?</text></g>
+<g class="amt">
+<text x="252" y="54" font-size="20" font-weight="700" text-anchor="start" class="bt">12,000</text>
+<text x="254" y="168" font-size="20" font-weight="700" text-anchor="start" class="bc">24,000</text>
+<rect x="268" y="112" width="96" height="26" rx="13" class="br"/><text x="316" y="130" font-size="13" font-weight="700" fill="#fff">수입역전!</text>
 <text x="110" y="346" font-size="16" font-weight="700" class="bt">6,000</text><text x="290" y="346" font-size="16" font-weight="700" class="bt">6,000</text>
+</g>
 </g></svg>
-<div class="calc">
+<div>
+<div class="ask">
+<p class="qq">네 사람이 <b>똑같이 20만 PV</b>씩 구매했어요.<br>S가 가장 먼저 시작했고, 본인이 A와 B를 소개했습니다.<br><b>누가 가장 많은 캐시백을 받을까요?</b></p>
+<button type="button" class="btn main" id="quizBtn" aria-expanded="false" aria-controls="quizAns">정답 보기</button>
+</div>
+<div class="calc" id="quizAns" hidden>
+<p class="ok"><b>정답: 나중에 시작한 '본인'</b></p>
 <p><b>A, B</b> 각자 20만 PV → 3% = <b>6,000원</b>씩</p>
 <p><b>본인</b> 그룹 60만 PV → 6% = 36,000원<br>A·B 몫 12,000원을 빼면 <b>24,000원</b></p>
 <p><b>S</b> 그룹 80만 PV → 6% = 48,000원<br>본인 그룹 몫 36,000원을 빼면 <b>12,000원</b></p>
+<button type="button" class="btn" id="quizReset">다시 풀기</button>
 </div>
 </div>
+</div>
+<div id="quizMore" hidden>
 <div class="cards three">
-<div class="card"><h3>선착순 ✕ 노력순 ○</h3><p>먼저 시작한 S보다, 나중에 시작해도 더 열심히 한 '본인'이 두 배를 받습니다. 순서가 아니라 노력이 결과를 정해요.</p></div>
-<div class="card"><h3>수입역전이 일어납니다</h3><p>위 사람이 아래 사람보다 항상 많이 버는 피라미드와 다릅니다. 아래에서 시작해도 얼마든지 위를 앞설 수 있어요.</p></div>
-<div class="card"><h3>누구도 손해 보지 않습니다</h3><p>보너스는 회사가 각자에게 직접 지급합니다. 누군가의 몫을 떼어 다른 사람에게 주는 구조가 아니라서, 모두가 자기 몫을 온전히 받아요.</p></div>
+<div class="card"><h3>선착순 ✕ 노력순 ○</h3><p>먼저 시작한 S보다, 나중에 시작해도 더 열심히 한 '본인'이 두 배를 받습니다. 가입 순서가 아니라 노력이 결과를 정해요.</p></div>
+<div class="card"><h3>수입의 역전</h3><p>위 사람이 아래 사람보다 항상 많이 버는 피라미드와 다릅니다. 아래에서 시작해도 얼마든지 위를 앞설 수 있어요.</p></div>
+<div class="card"><h3>누구도 손해 보지 않습니다</h3><p>후원수당은 회사가 각자에게 직접 지급합니다. 누군가의 몫을 떼어 다른 사람에게 주는 구조가 아니라서, 모두가 자기 몫을 온전히 받아요.</p></div>
 </div>
-<p class="note">구조를 이해하기 위한 단순화한 예시이며, 실제 수입이나 수입 보장이 아닙니다. 실제 보너스는 BV 기준으로 계산되고, 보너스 비율과 자격 조건은 한국암웨이 비즈니스 매뉴얼을 따릅니다.</p>
+</div>
+<p class="note">구조를 이해하기 위해 단순화한 예시이며(금액은 PV 기준으로 계산), 실제 수입이나 수입 보장이 아닙니다. 실제 후원수당은 BV 기준으로 계산되고, 비율과 자격 조건은 한국암웨이 비즈니스 매뉴얼을 따릅니다.</p>
 
 <div class="phil">
 <div class="kick">암웨이의 철학</div>
@@ -290,6 +318,12 @@
 <div>회사 정보는 한국암웨이 공식 자료(2025)와 암웨이 글로벌 발표 자료(2025년 실적)를 기준으로 저희가 정리했습니다. 사업 소득은 개인의 노력과 활동에 따라 다르며 보장되지 않습니다.</div>
 </div></footer>
 <script>
+(function(){
+  var q=document.getElementById('quiz'),b=document.getElementById('quizBtn'),a=document.getElementById('quizAns'),m=document.getElementById('quizMore'),ask=q.querySelector('.ask');
+  function set(on){q.classList.toggle('show',on);a.hidden=!on;m.hidden=!on;ask.hidden=on;b.setAttribute('aria-expanded',on);}
+  b.addEventListener('click',function(){set(true);});
+  document.getElementById('quizReset').addEventListener('click',function(){set(false);q.scrollIntoView({behavior:'smooth',block:'center'});});
+})();
 document.getElementById('vid').addEventListener('click',function(e){
   if(location.protocol==='file:')return; // 내 컴퓨터에서 열면 유튜브로 이동
   e.preventDefault();

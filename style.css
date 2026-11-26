@@ -283,6 +283,34 @@ a.vbox:hover .play{background:#ff0000}
 .bonus .bs{fill:#6c8fb3}.bonus .bm{fill:var(--pine2)}.bonus .ba{fill:#c98a2b}.bonus .br{fill:var(--coral)}
 .bonus .bt{fill:var(--ink)}.bonus .bc{fill:var(--coral)}
 .calc{display:grid;gap:12px}
+.calc .ok{background:var(--coral)!important;color:#fff}
+.calc .ok b{color:#fff}
+.calc .btn{justify-self:start;cursor:pointer;font:inherit;font-weight:500}
+.quiz .amt{opacity:0;transition:opacity .5s}
+.quiz.show .amt{opacity:1}
+.quiz.show .qm{opacity:0}
+.quiz .qm text{fill:var(--coral)}
+.bonus .bp{fill:var(--soft)}
+.ask{display:grid;gap:18px}
+.qq{font-size:17px;line-height:1.7}
+.qq b{color:var(--coral)}
+.ask .btn{justify-self:start;cursor:pointer;font:inherit;font-weight:700;border:0}
+#quizMore .cards{margin-top:16px}
+/* PV/BV + rate table */
+.pvbv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+.pvbv div{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;gap:2px}
+.pvbv b{font-family:"Gowun Batang",serif;font-size:30px;color:var(--pine2);line-height:1}
+.pvbv span{font-size:12px;color:var(--soft)}
+.pvbv p{margin-top:6px;font-size:15px}
+.pvbv em{font-style:normal;font-weight:700;color:var(--coral)}
+.rate{margin-top:14px;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.rh{font-weight:700;font-size:15px}
+.steps7{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;align-items:end;margin-top:12px;height:150px}
+.steps7 div{height:calc(34px + var(--h) * 15px);background:linear-gradient(var(--pine2),color-mix(in srgb,var(--pine2) 70%,#fff));border-radius:8px 8px 4px 4px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:6px 2px;color:#fff}
+.steps7 b{font-size:15px}
+.steps7 span{font-size:11px;opacity:.9;white-space:nowrap}
+.rf{margin-top:8px;font-size:12px;color:var(--soft)}
+@media(max-width:480px){.steps7 b{font-size:12px}.steps7 span{font-size:9px}.pvbv b{font-size:24px}}
 .calc p{background:var(--bg);border-radius:14px;padding:12px 16px;font-size:15px;color:var(--soft)}
 .calc b{color:var(--ink)}
 .cards.three{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:16px}
