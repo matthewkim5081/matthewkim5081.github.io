@@ -157,6 +157,8 @@ form .btn{justify-self:start;border:0;cursor:pointer;font-size:16px}
 /* guide page */
 .narrow{max-width:860px}
 .tint{background:var(--sage)}
+.tint .farm,.tint .mini span,.tint .brands span{background:var(--bg)}
+.tint .faq details{border-color:color-mix(in srgb,var(--line) 60%,var(--soft))}
 .ghead{padding-bottom:16px}
 .jump{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:28px}
 .jump a{display:grid;gap:2px;padding:16px 18px;border:1px solid var(--line);border-radius:16px;text-decoration:none;color:var(--soft);font-size:14px}
@@ -191,7 +193,9 @@ form .btn{justify-self:start;border:0;cursor:pointer;font-size:16px}
 .brands{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .brands span{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:500;font-size:15px}
 .brands em{font-style:normal;color:var(--soft);font-weight:400;font-size:13px;margin-left:4px}
-.jump{grid-template-columns:repeat(5,minmax(0,1fr))}
+.jump{grid-template-columns:repeat(6,minmax(0,1fr))}
+.tint .bonus,.tint .phil,.tint .qd{background:var(--bg)}
+.tint .calc p{background:var(--sage)}
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:28px}
 .stats div{background:var(--pine);color:#cfe2d8;border-radius:18px;padding:20px 18px;display:grid;gap:4px;font-size:14px;align-content:start}
 .stats b{font-family:"Gowun Batang",serif;font-size:clamp(30px,3.6vw,40px);color:#fff;line-height:1.1}
@@ -226,6 +230,63 @@ form .btn{justify-self:start;border:0;cursor:pointer;font-size:16px}
 .mini span{display:grid;background:var(--sage);border-radius:14px;padding:10px 16px;font-size:13px;color:var(--soft)}
 .mini b{font-family:"Gowun Batang",serif;font-size:24px;color:var(--pine2);line-height:1.2}
 .sub{margin-top:40px;font-size:24px}
+.video{margin:24px 0 0}
+.vbox{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000}
+.vbox iframe,.vbox img{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+a.vbox{display:block}
+.vbox .play{position:absolute;left:50%;top:50%;width:76px;height:54px;margin:-27px 0 0 -38px;border-radius:14px;background:#ff0000e6}
+.vbox .play::after{content:"";position:absolute;left:30px;top:15px;border-left:22px solid #fff;border-top:12px solid transparent;border-bottom:12px solid transparent}
+a.vbox:hover .play{background:#ff0000}
+/* life timeline */
+.life{margin-top:14px}
+.life .bar{display:grid;grid-template-columns:49.4fr 34.1fr;min-height:56px;border-radius:14px;overflow:hidden}
+.life .gap{padding-block:8px!important}
+.life .work{background:var(--pine2)}
+.life .gap{background:repeating-linear-gradient(135deg,var(--coral) 0 10px,color-mix(in srgb,var(--coral) 80%,#fff) 10px 20px);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 14px;font-size:13px;line-height:1.3}
+.life .gap b{font-size:20px}
+.life .ticks{display:grid;grid-template-columns:49.4fr 23.9fr 10.2fr;margin-top:8px;font-size:13px;color:var(--soft);line-height:1.4}
+.life .ticks div{border-left:2px solid var(--line);padding-left:8px}
+.life .ticks b{display:block;font-size:18px;color:var(--ink)}
+@media(max-width:560px){.life .ticks{grid-template-columns:repeat(3,minmax(0,1fr))}.life .ticks div{font-size:12px}}
+/* mission */
+.mission{margin:24px 0 8px;background:var(--bg);border:1px solid var(--line);border-radius:22px;padding:clamp(20px,3vw,32px)}
+.mq{font-family:"Gowun Batang",serif;font-size:clamp(24px,3vw,32px);line-height:1.3;margin:10px 0 14px}
+.mq span{display:block;font-size:.62em;color:var(--coral);margin-top:4px}
+.mission>p{color:var(--soft)}
+.vals4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0}
+.vals4 span{background:var(--sage);border-radius:14px;padding:12px;text-align:center;font-size:12px;color:var(--soft);display:grid}
+.vals4 b{font-family:"Gowun Batang",serif;font-size:22px;color:var(--pine2)}
+.mission .mine{color:var(--ink);border-left:4px solid var(--coral);padding-left:14px}
+.mission .mine b{color:var(--coral)}
+@media(max-width:480px){.vals4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* cashflow quadrant */
+.quad{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:28px;position:relative}
+.qd{border-radius:18px;padding:20px 22px;display:grid;gap:6px;align-content:start;border:1px solid var(--line);background:var(--bg)}
+.qd .lt{display:flex;align-items:baseline;gap:10px}
+.qd .lt b{font-family:"Gowun Batang",serif;font-size:44px;line-height:1}
+.qd .lt span{font-weight:700;font-size:18px}
+.qd .fx{font-weight:500;font-size:15px}
+.qd ul{margin:4px 0 0;padding-left:18px;color:var(--soft);font-size:14px}
+.qd.l .lt b{color:#6c8fb3}.qd.r .lt b{color:var(--coral)}
+.qd.r{border-color:var(--coral);box-shadow:inset 0 0 0 1px var(--coral)}
+.qlab{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:10px;text-align:center;font-weight:700;font-size:15px}
+.qlab span:first-child{color:#6c8fb3}.qlab span:last-child{color:var(--coral)}
+.msg{margin-top:28px;background:var(--pine);color:#eef6f1;border-radius:22px;padding:clamp(20px,3vw,32px)}
+.msg h3{color:#fff;font-size:clamp(22px,2.6vw,28px)}
+.msg p{color:#cfe2d8;margin-top:10px}
+.msg b{color:#ffb3a1}
+@media(max-width:560px){.qd{padding:16px}.qd .lt b{font-size:36px}}
+.video figcaption{margin-top:8px;font-size:14px;color:var(--soft)}
+.bonus{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(16px,4vw,40px);align-items:center;margin-top:20px;background:var(--sage);border-radius:22px;padding:clamp(16px,3vw,28px)}
+.bonus svg{display:block;width:100%;max-width:380px;margin-inline:auto}
+.bonus .bl{fill:none;stroke:var(--soft);stroke-width:2.5;stroke-dasharray:5 5}
+.bonus .bs{fill:#6c8fb3}.bonus .bm{fill:var(--pine2)}.bonus .ba{fill:#c98a2b}.bonus .br{fill:var(--coral)}
+.bonus .bt{fill:var(--ink)}.bonus .bc{fill:var(--coral)}
+.calc{display:grid;gap:12px}
+.calc p{background:var(--bg);border-radius:14px;padding:12px 16px;font-size:15px;color:var(--soft)}
+.calc b{color:var(--ink)}
+.cards.three{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:16px}
+@media(max-width:860px){.bonus{grid-template-columns:minmax(0,1fr)}}
 .win{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(20px,4vw,40px);align-items:center;margin-top:20px}
 .win svg{display:block;width:100%;max-width:340px;margin-inline:auto}
 .win .wl{stroke:var(--line)}
