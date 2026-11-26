@@ -126,11 +126,11 @@
 
 <section class="band contact" id="contact"><div class="in">
 <div><h2>함께 이야기 나눠요</h2><p class="lead">건강이나 생활에 관심이 있거나, 시간과 경제적인 여유를 고민하고 있다면 편하게 연락 주세요. 커피 한 잔 하며 이야기 나눠요.</p>
-<div class="info"><div><span>전화</span><span class="todo">010-0000-0000</span></div><div><span>카카오</span><span class="todo">카카오톡 ID</span></div><div><span>지역</span><span class="todo">활동 지역</span></div><div><span>시간</span><span class="todo">연락 가능한 시간</span></div></div></div>
+<div class="info"><div><span>지역</span><span>전 세계 어디나 ^^</span></div><div><span>시간</span><span>언제나 ^^</span></div></div></div>
 <div class="cta">
-<a class="big kakao" href="#contact"><b>카카오톡으로 문의</b><span class="todo">오픈채팅 링크</span></a>
-<a class="big" href="tel:010-0000-0000"><b>전화하기</b><span class="todo">010-0000-0000</span></a>
-<p>이름과 궁금한 점(건강·생활 정보, 제품, 사업 이야기 무엇이든)을 남겨 주시면 편한 시간에 연락드릴게요.</p>
+<div class="big kakao"><b>보내 드린 카톡으로 답장 주세요</b><span>이 페이지를 받으신 대화방에 편하게 남겨 주세요</span></div>
+<button type="button" class="big" id="share"><b>이 페이지 공유하기</b><span id="shareMsg">관심 있을 만한 분께 보내기</span></button>
+<p>궁금한 점(건강·생활 정보, 제품, 사업 이야기 무엇이든)을 남겨 주시면 편한 시간에 답장드릴게요.</p>
 </div>
 </div></section>
 
@@ -150,5 +150,13 @@ const g=document.getElementById('trees');let s=7;const r=()=>(s=s*16807%21474836
 const xs=[60,170,300,1010,1360,1420,420];
 g.innerHTML=xs.map(x=>{const h=70+r()*70,y=560+r()*40;return `<g transform="translate(${x} ${y})"><rect x="-5" y="-10" width="10" height="34" fill="#3b2e26"/><ellipse cx="0" cy="${-h/2}" rx="${h*.38}" ry="${h/2}" fill="#1d6650"/><ellipse cx="${-h*.12}" cy="${-h/2}" rx="${h*.2}" ry="${h*.42}" fill="#2a7a5f"/></g>`}).join('');
 }</script>
+<script>
+document.getElementById('share').addEventListener('click',function(){
+  var u='https://matthewkim5081.github.io/',m=document.getElementById('shareMsg');
+  if(navigator.share){navigator.share({title:document.title,url:u}).catch(function(){});return;}
+  if(navigator.clipboard){navigator.clipboard.writeText(u).then(function(){m.textContent='주소를 복사했어요. 카톡에 붙여 넣어 주세요';});}
+  else{m.textContent=u;}
+});
+</script>
 </body>
 </html>

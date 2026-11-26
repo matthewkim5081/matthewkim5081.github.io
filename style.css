@@ -121,6 +121,8 @@ form .btn{justify-self:start;border:0;cursor:pointer;font-size:16px}
 .cta .big{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;min-height:72px;padding:16px 24px;border-radius:16px;background:#ffffff14;border:1px solid #ffffff33;color:#fff;text-decoration:none;font-size:18px}
 .cta .big.kakao{background:#fee500;border-color:#fee500;color:#191600}
 .cta .big:hover{filter:brightness(1.06)}
+.cta .big span{font-size:14px;opacity:.8}
+.cta button.big{font:inherit;font-size:18px;cursor:pointer;text-align:left;width:100%}
 .cta p{color:#cfe2d8;font-size:15px;margin-top:4px}
 
 /* story page */
